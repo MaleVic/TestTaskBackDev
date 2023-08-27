@@ -40,7 +40,7 @@ func DBinstance() *mongo.Client {
 
 var Client *mongo.Client = DBinstance()
 
-// OpenCollection is функция, которая соединяется с коллекцией в базе данных
+// OpenCollection функция, которая соединяется с коллекцией в базе данных
 func OpenCollection(client *mongo.Client, collectionName string) *mongo.Collection {
 
 	var collection *mongo.Collection = client.Database("cluster0").Collection(collectionName)
