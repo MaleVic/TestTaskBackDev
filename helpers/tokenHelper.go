@@ -43,8 +43,8 @@ func GenerateAllTokens(email string, firstName string, lastName string, uid stri
 		},
 	}
 
-	token, err := jwt.NewWithClaims(jwt.SigningMethodHS512, claims).SignedString([]byte(SECRET_KEY))
-	refreshToken, err := jwt.NewWithClaims(jwt.SigningMethodHS512, refreshClaims).SignedString([]byte(SECRET_KEY))
+	token, err := jwt.NewWithClaims(jwt.SigningMethodHS512, claims).SignedString([]byte(SECRET_KEY))               //алгоритм SHA512
+	refreshToken, err := jwt.NewWithClaims(jwt.SigningMethodHS512, refreshClaims).SignedString([]byte(SECRET_KEY)) //алгоритм SHA512
 
 	if err != nil {
 		log.Panic(err)
